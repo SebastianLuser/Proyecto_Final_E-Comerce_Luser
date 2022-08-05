@@ -1,0 +1,11 @@
+.ads{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    grid-area: ads;
+    background-color: black;
+    p{
+        color: white;
+    }
+}

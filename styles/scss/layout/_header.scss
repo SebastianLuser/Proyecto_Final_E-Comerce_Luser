@@ -1,0 +1,54 @@
+header{
+    // position: sticky;
+    grid-area: header;
+    @include flexible(space-around);
+    .logo{
+        img{
+            height: 140px;
+            width: 140px;
+        }
+    }
+    #lista{
+        @include flexible(center);
+        text-align: center;
+        li{
+            text-align: center;
+            background-color: grey;
+            font-family: 'Roboto', sans-serif;
+            border-radius: 5px;
+            margin: 0.7rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            padding: 0.2rem;
+            &:hover{
+                background-color: black;
+            }
+            a{
+                text-decoration: none;
+                color: $text-color;
+                &:hover{
+                    color: $text-color;
+                }
+            }
+        }
+    }
+    .assets{
+        display: flex;
+        flex-direction: row;
+        #carritoLogo{
+            #carrito-elementos{
+                color: white;
+                background: black;
+            }
+        }
+    }
+}
+
+#navLogos{
+    i{
+        object-fit:cover;
+        height: 2rem;
+        width: 2rem;
+        font-size: 1.4rem;
+    }
+}

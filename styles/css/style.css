@@ -1,0 +1,317 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+.box {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto auto auto 1fr auto;
+  grid-template-areas: "ads" "header" "aside" "main" "footer"; }
+
+.row {
+  margin-top: 0;
+  margin-right: 0;
+  margin-left: 0; }
+
+ul, ol {
+  padding: 0;
+  list-style-type: none; }
+
+.texts h1, #card h1 {
+  padding: 0.5rem;
+  color: #F3F4FC;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 0; }
+
+.texts h2, #card h2 {
+  padding: 0.5rem;
+  color: #F3F4FC;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 0; }
+
+.texts h3, #card h3 {
+  padding: 0.5rem;
+  color: #F3F4FC;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 0; }
+
+.texts h4, #card h4 {
+  padding: 0.5rem;
+  color: #F3F4FC;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 0; }
+
+.texts h5, #card h5 {
+  padding: 0.5rem;
+  color: #F3F4FC;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 0; }
+
+.texts p, #card p {
+  padding: 0.5rem;
+  color: #F3F4FC;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 0; }
+
+.texts li, #card li {
+  padding: 0.5rem;
+  color: #F3F4FC;
+  font-family: 'Poppins', sans-serif; }
+
+header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  header .logo img {
+    height: 140px;
+    width: 140px; }
+  header #lista {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
+    header #lista li {
+      text-align: center;
+      background-color: grey;
+      font-family: 'Roboto', sans-serif;
+      border-radius: 5px;
+      margin: 0.7rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      padding: 0.2rem; }
+      header #lista li:hover {
+        background-color: black; }
+      header #lista li a {
+        text-decoration: none;
+        color: #F3F4FC; }
+        header #lista li a:hover {
+          color: #F3F4FC; }
+  header .assets {
+    display: flex;
+    flex-direction: row; }
+    header .assets #carritoLogo #carrito-elementos {
+      color: white;
+      background: black; }
+
+#navLogos i {
+  object-fit: cover;
+  height: 2rem;
+  width: 2rem;
+  font-size: 1.4rem; }
+
+footer {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #040c0b;
+  grid-area: footer; }
+  footer #redes {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    footer #redes ul {
+      position: relative;
+      display: flex;
+      z-index: 2; }
+      footer #redes ul li {
+        position: relative;
+        list-style: none;
+        margin: 0.6rem; }
+        footer #redes ul li a {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-decoration: none;
+          width: 2.8rem;
+          height: 2.8rem;
+          color: #F3F4FC;
+          font-size: 1.8em;
+          border: 1px solid rgba(255, 255, 255, 0.4);
+          border-right: 1px solid rgba(255, 255, 255, 0.2);
+          border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+          box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
+          backdrop-filter: blur(2px);
+          border-radius: 10px;
+          transition: 0.5s;
+          overflow: hidden; }
+          footer #redes ul li a:hover {
+            transform: translateY(-20px); }
+          footer #redes ul li a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50px;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.5);
+            transform: skewX(45deg) translateX(150px); }
+          footer #redes ul li a:hover::before {
+            transform: skewX(45deg) translateX(-150px); }
+          footer #redes ul li a .fa-facebook-square:hover {
+            color: #3b5998; }
+          footer #redes ul li a .fa-instagram:hover {
+            color: #b144bb; }
+          footer #redes ul li a .fa-twitter-square:hover {
+            color: #1da1f2; }
+          footer #redes ul li a .fa-linkedin:hover {
+            color: #0077b5; }
+  footer #info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-items: flex-end;
+    color: #F3F4FC; }
+  footer .footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+
+.ads {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  grid-area: ads;
+  background-color: black; }
+  .ads p {
+    color: white; }
+
+aside {
+  grid-area: aside;
+  margin-top: 82px;
+  background-color: white; }
+
+/* The sidebar menu */
+.sidebar {
+  height: 100%;
+  /* 100% Full-height */
+  width: 0;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Stay on top */
+  top: 0;
+  right: 0;
+  background-color: #001920;
+  /* Black*/
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 60px;
+  /* Place content 60px from the top */
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidebar */
+  /* The sidebar links */
+  /* The button used to open the sidebar */
+  /* Position and style the close button (top right corner) */ }
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #c5c8c8;
+    display: block;
+    transition: 0.3s;
+    /* When you mouse over the navigation links, change their color */ }
+    .sidebar a :hover {
+      color: #f1f1f1; }
+  .sidebar .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #001920;
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none; }
+    .sidebar .openbtn .openbtn:hover {
+      background-color: #C5c8c8; }
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    font-size: 36px;
+    margin-right: 50px; }
+  .sidebar .form-check {
+    color: #ffffff; }
+  .sidebar .producto {
+    justify-content: center;
+    align-items: center; }
+    .sidebar .producto img {
+      width: 120px;
+      height: 120px; }
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-right .5s;
+  /* If you want a transition effect */
+  padding: 20px; }
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px; }
+  .sidebar a {
+    font-size: 18px; } }
+
+body {
+  background-color: #ffffff; }
+
+main {
+  background-color: #ffffff;
+  grid-area: main;
+  display: flex;
+  align-items: center; }
+
+header {
+  background-color: #2ecb72; }
+
+#card {
+  padding: 1rem; }
+  #card h2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Courgette', cursive;
+    font-size: 2rem; }
+  #card h3 {
+    font-size: 1.5rem; }
+  #card p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem; }
+
+#picture {
+  padding: 1rem; }
+  #picture img {
+    width: 240px;
+    height: 360px; }
+
+@media screen and (min-width: 320px) {
+  .box {
+    grid-template-rows: auto auto auto 1fr auto;
+    grid-template-areas: "ads ads ads ads" "header header header header" "aside main main main" "aside main main main" "footer footer footer footer"; } }
+
+@media screen and (min-width: 480px) {
+  .box {
+    grid-template-rows: auto auto auto 1fr auto;
+    grid-template-areas: "ads ads ads ads" "header header header header" "aside main main main" "aside main main main" "footer footer footer footer"; } }
+
+@media screen and (min-width: 600px) {
+  .box {
+    grid-template-rows: auto auto auto 1fr auto;
+    grid-template-areas: "ads ads ads ads" "header header header header" "aside main main main" "aside main main main" "footer footer footer footer"; } }
+
+@media screen and (min-width: 768px) {
+  .box {
+    grid-template-rows: auto auto auto 1fr auto;
+    grid-template-areas: "ads ads ads ads" "header header header header" "aside main main main" "aside main main main" "footer footer footer footer"; } }
+
+@media screen and (min-width: 1024px) {
+  .box {
+    grid-template-rows: auto auto auto 1fr auto;
+    grid-template-areas: "ads ads ads ads" "header header header header" "aside main main main" "aside main main main" "footer footer footer footer"; } }
+
+@media screen and (min-width: 1200px) {
+  .box {
+    grid-template-rows: auto auto auto 1fr auto;
+    grid-template-areas: "ads ads ads ads" "header header header header" "aside main main main" "aside main main main" "footer footer footer footer"; } }

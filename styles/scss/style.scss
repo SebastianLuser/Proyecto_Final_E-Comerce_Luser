@@ -1,0 +1,108 @@
+//BASE
+@import "./base/reset";
+@import "./base/colors";
+
+//ABSTRACTS
+@import "./abstracts/extends";
+@import "./abstracts/mixins";
+
+//LAYOUT
+@import "./layout/header";
+@import "./layout/footer";
+@import "./layout/ads";
+@import "./layout/aside";
+@import "./layout/sidebar";
+
+// BODY
+body{
+    background-color: #ffffff;
+}
+// MAIN
+main{
+    background-color: #ffffff;
+    grid-area: main;
+    display: flex;
+    align-items: center;
+}
+
+header{
+    background-color: #2ecb72;
+}
+//PAGES
+// HOME 
+@import "./pages/home";
+
+
+
+
+
+
+
+//TODO:VISTAS MOBILE Y DESKTOP CON UN IF PARA AGRANDAR O ACHICAR EL TEXTO Y LAS FOTOS
+//MEDIA QUERYS
+@media screen and (min-width: 320px) {
+    .box{
+        grid-template-rows: auto auto auto 1fr auto;
+        grid-template-areas: 
+        "ads ads ads ads"
+        "header header header header"
+        "aside main main main"
+        "aside main main main"
+        "footer footer footer footer";
+    }
+}
+@media screen and (min-width: 480px) {
+    .box{
+        grid-template-rows: auto auto auto 1fr auto;
+        grid-template-areas: 
+        "ads ads ads ads"
+        "header header header header"
+        "aside main main main"
+        "aside main main main"
+        "footer footer footer footer";
+    }
+}
+@media screen and (min-width: 600px) {
+    .box{
+        grid-template-rows: auto auto auto 1fr auto;
+        grid-template-areas: 
+        "ads ads ads ads"
+        "header header header header"
+        "aside main main main"
+        "aside main main main"
+        "footer footer footer footer";
+    }
+} 
+@media screen and (min-width: 768px) {
+    .box{
+        grid-template-rows: auto auto auto 1fr auto;
+        grid-template-areas: 
+        "ads ads ads ads"
+        "header header header header"
+        "aside main main main"
+        "aside main main main"
+        "footer footer footer footer";
+    }
+}
+@media screen and (min-width: 1024px) {
+    .box{
+        grid-template-rows: auto auto auto 1fr auto;
+        grid-template-areas: 
+        "ads ads ads ads"
+        "header header header header"
+        "aside main main main"
+        "aside main main main"
+        "footer footer footer footer";
+    }
+}
+@media screen and (min-width: 1200px) {
+    .box{
+        grid-template-rows: auto auto auto 1fr auto;
+        grid-template-areas: 
+        "ads ads ads ads"
+        "header header header header"
+        "aside main main main"
+        "aside main main main"
+        "footer footer footer footer";
+    }
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Title Name -->
+        <title>Document</title>
+        <!-- Keywords y  descripcion-->
+        <meta name="descripcion" content=""> 
+        <meta name="keywords" content="">
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat:wght@100&family=Poppins&family=Roboto&display=swap" rel="stylesheet">
+        <!-- Script -->
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <!--icon-->
+        <script src="https://kit.fontawesome.com/a358678dcd.js" crossorigin="anonymous"></script>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Style link -->
+        <link rel="stylesheet" href="./styles/css/style.css">
+        <!-- Javascript -->
+        <script src="main.js" defer></script>
+    </head>
+    <body>
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="cart-items" id="cart-items">
+                
+            </div>
+            <a href="#">Purcharse</a>
+            <a href="#" onclick="clearCart()">Clear Cart</a>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="1cuota">
+                <label class="form-check-label" for="flexRadioDefault2"><p>1 Cuota</p></label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="3cuotas">
+                <label class="form-check-label" for="flexRadioDefault2"><p>3 Coutas</p></label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="6cuotas">
+                <label class="form-check-label" for="flexRadioDefault2"><p>6 Cuotas</p></label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="12cuotas">
+                <label class="form-check-label" for="flexRadioDefault2"><p>12 Coutas</p></label>
+            </div>
+        </div>
+        <div class="box" id="main">
+            <!-- ADS -->
+            <div class="ads">
+                <p>Free Shipping</p>
+                <p>Free 30 days return</p>
+                <p>Express Delivery</p>
+            </div>
+            <!-- Header-->
+            <header>
+                <!-- LOGO -->
+                <div class="logo">
+                    <img src="assets/images/cropped-logo-dummy.png" alt="Logo">
+                </div>
+                <!-- Navigation Bar-->
+                <nav class="navbar navbar-expand-lg" >
+                    <div class="container-fluid">
+                        <!-- NAV -->
+                        <div class="navbar" id="navbarNav">
+                            <ul class="navbar-nav mx-auto nav-pills" id="lista">
+                                <li class="nav-item ">
+                                    <a aria-current="page" href="./index.html" class="nav-link ">Home</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a aria-current="page" href="#" class="nav-link">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a  aria-current="page" href="#" class="nav-link">Shop</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a aria-current="page" href="#" class="nav-link">Blog</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav> 
+                <!-- Side Opcions  -->
+                <!-- data action buscar -->
+                <!-- role= "button" buscar  -->
+                <div class="assets" id="navLogos">
+                    <i class="fa-solid fa-magnifying-glass"></i>               
+                    <div type="button"  id="userLogo" >
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div type="submit" id="favLogo">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <div type="button" id="carritoLogo" onclick="openNav()">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="badge bg-black rounded-pill" id="carrito-elementos">0</span>
+                        <input type="hidden" value="0" id="precioCarrito">
+                    </div>
+                </div>
+            </header>
+            <aside>
+                <ul class="navbar-nav  mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!"onclick="mostrarCards(arrayProductos)" ><h2>All Products</h2></a></li>
+                    <!-- Categorias y Filtros -->
+                    <h2>Categorias</h2>
+                    <li class="nav-item"><a class="nav-link" href="#!" onclick="filtrarPorCategoria('Cartas')">Categoria Cartas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!" onclick="filtrarPorCategoria('Aventura')">Categoria Aventura</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!" onclick="filtrarPorCategoria('Estrategia')">Categoria Estrategia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!" onclick="filtrarPorCategoria('Rol')">Categoria Rol</a></li>
+                    <h2>Filtros</h2>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#!" >Rango de precio</a>
+                        <input type="range">
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#!" onclick="PrecioMayorMenor()">Ordenar PrecioMayorMenor</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!" onclick="PrecioMenorMayor()">Ordenar PrecioMenorMayor</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!" onclick="IdMayorMenor()">Ordenar IdMayorMenor</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!" onclick="IdMenorMayor()">Ordenar IdMenorMayor</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!" onclick="Alfabeticamente()">Ordenar Alfabeticamente</a></li>
+                </ul>
+            </aside>
+            <main>
+                <section class="py-5">
+                    <div class="container px-4 px-lg-5 mt-5">
+                        <div id="contenedor-cards" class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+        
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer>
+                <div class="row">
+                    <nav class="offset-lg-4 col-lg-4" id="redes">
+                        <ul>
+                            <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                            <li><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-square"></i></a></li>
+                            <li><a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter-square"></i></a></li>
+                        </ul>
+                    </nav>
+                    <!-- FORM -->
+                    <div class="container-fluid">
+                        <div class="row" >
+                            <div class="offset-xl-4 col-xl-4">
+                                <h2 class="text-white">Contacto</h2>
+                                <form class="rounded text-white" id="form" >
+                                    <div class="mb-3">
+                                        <label class="form-label"><p>Nombre y Apellido</p></label>
+                                        <input type="text" id="exampleInputName1" required maxlength="50" minlength="8"class="form-control" >
+                                    </div>
+                                    <div class="mb-3" >
+                                        <label  class="form-label"><p>Dirección de Email</p></label>
+                                        <input type="email" class="form-control" id="user" required maxlength="80" aria-describedby="emailHelp">
+                                        <b id="feedback"></b>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label  class="form-label"><p>Asunto y descripción(opcional)</p></label>
+                                        <textarea type="input" class="form-control" ></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary" value="Enviar"><p>Submit</p></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-container">
+                    <small>&copy; 2022 <b>Luser Sebastian</b> - Todos los Derechos Reservados.</small>
+                </div>
+            </footer>
+        </div>
+        <!-- SCRIPTS -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    </body>
+</html>

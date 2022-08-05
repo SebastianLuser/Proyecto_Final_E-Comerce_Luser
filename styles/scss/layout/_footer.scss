@@ -1,0 +1,73 @@
+footer{
+    padding-top:1rem;
+    padding-bottom: 1rem;
+    background-color: $dark-color;
+    grid-area: footer;
+    #redes{
+        @include flexible(center);
+        ul{
+            position: relative;
+            display: flex;
+            z-index: 2;
+            li{
+                position: relative;
+                list-style: none;
+                margin: 0.6rem;
+                a{
+                    position: relative;
+                    @include flexible(center);
+                    text-decoration: none;
+                    width: 2.8rem;
+                    height: 2.8rem;
+                    color: $text-color;
+                    font-size: 1.8em;
+                    @include borde(rgba(255,255,255,0.4));
+                    border-right: 1px solid $trans-color;
+                    border-bottom: 1px solid $trans-color;
+                    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
+                    backdrop-filter: blur(2px);
+                    border-radius: 10px;
+                    transition: 0.5s;
+                    overflow: hidden;
+                    &:hover{
+                        transform: translateY(-20px);
+                    }
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 50px;
+                        height: 100%;
+                        background: rgba(255,255,255,0.5);
+                        transform: skewX(45deg) translateX(150px);
+                    }
+                    &:hover::before{
+                        transform: skewX(45deg) translateX(-150px);
+                    }
+                    .fa-facebook-square:hover {
+                        color: #3b5998;
+                    }
+                    .fa-instagram:hover {
+                        color: #b144bb;
+                    }
+                    .fa-twitter-square:hover {
+                        color: #1da1f2;
+                    }
+                    .fa-linkedin:hover {
+                        color: #0077b5;
+                    }
+                }
+            }
+        }
+    }
+    #info{
+        @include flexible(center);
+        flex-direction: column;
+        align-items: flex-end;
+        color: $text-color;
+    }
+    .footer-container{
+        @include flexible(center);
+    }
+}

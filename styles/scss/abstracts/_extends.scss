@@ -1,0 +1,21 @@
+.texts{
+    @for $i from 1 to 6 {
+        h#{$i}{
+            padding: 0.5rem;
+            color: $text-color;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 0;
+        }
+    }
+    p{
+        padding: 0.5rem;
+        color: $text-color;
+        font-family: 'Poppins', sans-serif;
+        margin-bottom: 0;
+    }
+    li{
+        padding: 0.5rem;
+        color: $text-color;
+        font-family: 'Poppins', sans-serif;
+    }
+}
