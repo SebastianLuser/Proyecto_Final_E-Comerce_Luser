@@ -130,11 +130,13 @@ function agregarAlCarrito(pId){
         // const resultado = new Producto (arrayProductos.find((producto) => producto.id == id));
         //Optimizo evitando usar el producto.
         let cartItem = {...Storage.getProdcut(pId), amount: 1};
-        console.log(cartItem);
+        //console.log(cartItem);
         if(cart.find(item => item.id===pId)){
-            cart.find(item => {
-                item.id===pId;
-                item.amount = item.amount +1;
+            cart.forEach(item => {
+                if(item.id===pId){
+                    item.amount = item.amount +1;
+                    console.log(item);
+                }
             });
         }
         else{
@@ -156,7 +158,7 @@ function mostrarCarrito(carrito){
     document.getElementById('carrito-elementos').innerHTML = carrito.length + "- $" + totalCarrito;
     let getcart = [];
     getcart = Storage.getCart();
-    console.log(getcart);
+    //console.log(getcart);
     addCartItem(getcart)
 }
 
@@ -267,7 +269,7 @@ function verificarStock(id){
             //Spread para crear un nuevo objeto con un sinStock
             let sinStock = arrayProductos.find(elemento => elemento.id == producto.id);
             sinStock = {...sinStock, reponer: true}
-            console.log(sinStock);
+            //console.log(sinStock);
         }
     });
 }

@@ -233,7 +233,8 @@ aside {
     font-size: 36px;
     margin-right: 50px; }
   .sidebar .form-check {
-    color: #ffffff; }
+    color: #ffffff;
+    margin-left: 1rem; }
   .sidebar .producto {
     justify-content: center;
     align-items: center; }
@@ -244,8 +245,7 @@ aside {
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
   transition: margin-right .5s;
-  /* If you want a transition effect */
-  padding: 20px; }
+  /* If you want a transition effect */ }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
